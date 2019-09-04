@@ -1,6 +1,5 @@
-
 body {
-  font-family: sans-serif;
+  font-family: OpenSans-Regular;
   margin: 0;
   padding: 0;
 }
@@ -14,7 +13,8 @@ a {
   min-height: 100vw;
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center center;
   text-transform: uppercase;
   background-image: url("img/football_767.jpg");
  }
@@ -52,14 +52,14 @@ a {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  font-family: Open Sans;
+  font-family: OpenSans-Bold;
   color: #ffffff;
   font-size: calc(1.25vw + 24px);
 }
 
 .main-title-style {
-  padding-left: 16%;
-  padding-top: 4%;
+  margin-left: 16%;
+  margin-top: 4%;
 }
 
 .buttons-container {
@@ -68,7 +68,6 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 14.879vh;
   font-size: 8px;
 }
 
@@ -81,8 +80,7 @@ a {
   background-color: #5e42b0;
   color: #ffffff;
   border-radius: 25px;
-  padding-top: calc(1vw + 0.2em);
-  padding-bottom: calc(1vw + 0.2em);
+  height: 36px;
 }
 
 .download-button:hover {
@@ -91,9 +89,8 @@ a {
 }
 
 .button-insides {
+  padding-top: 1%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
 }
 
 .download-apple {
@@ -117,16 +114,29 @@ a {
 }
 
 .button-insides-style__second {
-  font-family: 'Open Sans';
+  font-family: OpenSans-Bold;
+}
+
+@media (min-width: 640px) {
+  .download-google-play, .main-title-style, .download-apple {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .buttons-container {
+  	flex-direction: row;
+  	font-size: 14px;
+  }
+
+  .download-button {
+  	border-radius: 50px;
+  }
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
   .header-container {
-  	height: 100vw;
-  }
-
-  .buttons-container {
-  	height: 14.879vw;
+	min-height: 100vw;
   }
 }
 
@@ -134,9 +144,96 @@ a {
   .header {
     background-image: url("img/football_1280.jpg");
   }
+
+  .header-container {
+    padding-left: 7.619vw;
+    padding-right: 7.619vw;
+  }
+
+  .logo-link {
+    width: 205px;
+    height: 56px;
+  }
+
+  .main-title {
+  	padding-left: 4.11vw;
+  	padding-right: 4.11vw;
+    font-size: 60px;
+  }
+
+  .main-title-style {
+  	padding-left: 17%;
+  }
+
+  .download-button {
+  	width: 308px;
+  	height: 77px;
+  }
+
+  .button-insides {
+    padding-top: 5%;
 }
 
-@media (min-width: 961px) and (max-width: 1920px), (min-width: 1920px) {
+  .apple-icon, .google-play-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (min-width: 961px) {
   .header {
     background-image: url("img/football_1920.jpg");
+  }
+
+  .header-container {
+  	min-height: 100vw;
+    padding-left: 9.5vw;
+    padding-right: 9.5vw;
+  }
+
+  .logo-link {
+    width: 191px;
+    height: 52px;
+  }
+
+  .main-title {
+    font-size: calc(4.1vw + 10.6px);
+  }
+  
+  .main-title-style {
+    padding-left: 26.5%;
+  }
+
+  .buttons-container {
+  	width: 658px;
+  	height: 75px;
+  }
+
+  .download-button {
+  	width: 303px;
+  	height: 75px;
+  }
+
+  .button-insides {
+    padding-top: 5%;
+}
+
+  .apple-icon, .google-play-icon {
+    width: 40px;
+    height: 45px;
+  }
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("fonts/OpenSans-Regular.ttf");
+  font-weight: 400px;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
 }
