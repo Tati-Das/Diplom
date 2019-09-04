@@ -33,7 +33,6 @@ a {
 .header-container {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -51,15 +50,15 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   font-family: OpenSans-Bold;
   color: #ffffff;
   font-size: calc(1.25vw + 24px);
 }
 
 .main-title-style {
-  margin-left: 16%;
   margin-top: 4%;
+  margin-left: 15%;
 }
 
 .buttons-container {
@@ -72,10 +71,8 @@ a {
 }
 
 .download-button {
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   width: inherit;
   background-color: #5e42b0;
   color: #ffffff;
@@ -89,8 +86,10 @@ a {
 }
 
 .button-insides {
-  padding-top: 1%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .download-apple {
@@ -99,7 +98,7 @@ a {
 
 .download-google-play {
   margin-top: 1.04em;
-  padding-right: calc(1.25vw + 1em);
+  padding-right: calc(1vw + 1em);
 }
 
 .apple-icon,
@@ -115,23 +114,6 @@ a {
 
 .button-insides-style__second {
   font-family: OpenSans-Bold;
-}
-
-@media (min-width: 640px) {
-  .download-google-play, .main-title-style, .download-apple {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .buttons-container {
-  	flex-direction: row;
-  	font-size: 14px;
-  }
-
-  .download-button {
-  	border-radius: 50px;
-  }
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
@@ -156,23 +138,13 @@ a {
   }
 
   .main-title {
-  	padding-left: 4.11vw;
-  	padding-right: 4.11vw;
     font-size: 60px;
-  }
-
-  .main-title-style {
-  	padding-left: 17%;
   }
 
   .download-button {
   	width: 308px;
   	height: 77px;
   }
-
-  .button-insides {
-    padding-top: 5%;
-}
 
   .apple-icon, .google-play-icon {
     width: 42px;
@@ -201,7 +173,7 @@ a {
   }
   
   .main-title-style {
-    padding-left: 26.5%;
+    align-self: flex-end;
   }
 
   .buttons-container {
@@ -214,13 +186,40 @@ a {
   	height: 75px;
   }
 
-  .button-insides {
-    padding-top: 5%;
-}
-
   .apple-icon, .google-play-icon {
     width: 40px;
     height: 45px;
+  }
+}
+
+@media (min-width: 961px) and (orientation: portrait) {
+  .header {
+  	min-height: 100vh;
+  }
+
+  .header-container {
+  	min-height: 100vh;
+  }
+}
+
+@media (min-width: 640px) {
+  .download-google-play, .main-title-style, .download-apple {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-title {
+  	width: 92.8%;
+  }
+
+  .buttons-container {
+  	flex-direction: row;
+  	font-size: 14px;
+  }
+
+  .download-button {
+  	border-radius: 50px;
   }
 }
 
