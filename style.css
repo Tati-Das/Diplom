@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   padding: 0;
   margin: 0;
   font-family: OpenSans-Bold;
@@ -17,6 +17,7 @@ a {
 
 p {
   margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -51,7 +52,7 @@ p {
   padding-right: 6.25vw;
 }
 
-.logo-link {
+.logo-link, .logo-icon {
   width: 133px;
   height: 36px;
 }
@@ -72,9 +73,11 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   font-size: 8px;
+  padding-left: 3.25vw;
+  padding-right: 3.25vw;
 }
 
 .download-button {
@@ -105,7 +108,7 @@ p {
 
 .download-google-play {
   margin-top: 1.04em;
-  padding-right: calc(1vw + 1em);
+  padding-right: calc(1vw + 1em)
 }
 
 .apple-icon,
@@ -290,20 +293,21 @@ p {
   display: flex;
   flex-wrap: wrap;
   max-width: 100vw;
+  font-size: 0;
 }
 
 .post {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100vw;
 }
 
 .pic-container {
-  width: 100%;
+  max-width: 100vw;
 }
 
 .be-active-pic, .find-contact-pic, .work-it-pic {
-  height: 100%;
   width: 100%;
 }
 
@@ -351,14 +355,93 @@ p {
   font-size: 16px;
 }
 
+.footer {
+  background-color: #0a0e34;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-transform: uppercase;
+  background-image: url("img/game_767.jpg");
+}
+
+.footer:before {
+  content: "";
+  background-color: #0a0e34;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+}
+
+.footer-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 17.6vh;
+  padding-bottom: 1.6vh;
+  padding-left: 6.25vw;
+  padding-right: 6.25vw;
+}
+
+.button-and-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 32.4vh;
+}
+
+.buttons-and-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 45vh;
+  width: 100%;
+}
+
+.download-app-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 75px;
+  background: linear-gradient(to top, #4c3391, #7151ce);
+  border-radius: 15px;
+}
+
+.download-app-icon {
+  width: 56px;
+  height: 47px;
+}
+
+.download-app-button:hover {
+  background: linear-gradient(to bottom, #4c3391, #7151ce);
+}
+
+.footer-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  font-size: calc(6vw + 13px);
+  color: #ffffff;
+}
+
+.footer-title-style {
+  font-size: calc(2vw + 7.6px);
+  color: #9b8ec1;
+}
+
 @media (min-width: 641px) and (max-width: 960px) {
   .header {
     background-image: url("img/football_1280.jpg");
-  }
-
-  .header-container {
-    padding-left: 7.619vw;
-    padding-right: 7.619vw;
   }
 
   .logo-link {
@@ -367,12 +450,18 @@ p {
   }
 
   .main-title {
+  	margin-right: 7.7vw;
+  	margin-left: 7.7vw;
     font-size: 60px;
   }
 
   .download-button {
     width: 308px;
     height: 77px;
+  }
+
+  .download-google-play {
+  	margin-left: 32px;
   }
 
   .apple-icon, .google-play-icon {
@@ -454,6 +543,48 @@ p {
     left: 47px;
     top: 78px;
   }
+
+  .footer {
+  	background-image: url("img/game_1280.jpg");
+  }
+
+  .footer-container {
+  	padding-top: 13.5vh;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .button-and-title-container {
+  	width: 92%;
+  	height: 34.6vh;
+  }
+
+  .download-app-button {
+    width: 132px;
+    height: 138px;
+    border-radius: 25px;
+  }
+
+  .download-app-icon {
+    width: 102px;
+    height: 86px;
+  }
+
+  .footer-title {
+  	font-size: calc(4.7vw + 40.5px);
+  }
+
+  .buttons-and-logo-container {
+  	width: 85%;
+  }
+
+  .buttons-and-logo-container {
+	height: 25vh;
+}
+
+  .footer-buttons-container {
+  	padding: 0;
+  }
 }
 
 
@@ -488,6 +619,10 @@ p {
   .download-button {
     width: 303px;
     height: 75px;
+  }
+
+  .download-google-play {
+  	margin-left: 50px;
   }
 
   .apple-icon, .google-play-icon {
@@ -565,13 +700,13 @@ p {
   }
 
   .pic-container {
-    width: 50vw;
+    width: 50%;
   }
 
   .post-container {
     display: flex;
     flex-wrap: wrap;
-    width: 50vw;
+    width: 50%;
   }
 
   .post-title {
@@ -606,6 +741,47 @@ p {
     right: 100%;
     top: 65%;
     bottom: 100%;
+  }
+
+  .footer {
+  	display: flex;
+  	justify-content: center;
+  	background-image: url("img/game_1920.jpg");
+  }
+
+  .footer-container {
+  	padding: 29vh 0 5vh;
+  }
+
+  .button-and-title-container {
+  	height: 14.8vh;
+  	flex-direction: row;
+  }
+
+  .download-app-button {
+  	border-radius: 30px;
+  	width: 6.9vw;
+  	height: 7.13vw;
+  }
+
+  .download-app-icon {
+  	width: 4.8vw;
+  	height: 4.3vw;
+  }
+
+  .footer-title {
+  	font-size: 80px;
+  	margin-left: 2vw;
+  	flex-direction: column;
+  	text-align: top;
+  }
+
+  .footer-title-style {
+  	font-size: 30px;
+  }
+
+  .buttons-and-logo-container {
+  	height: 20.625vw;
   }
 }
 
@@ -675,12 +851,10 @@ p {
 }
 
 @media (min-width: 641px) and (orientation: portrait) {
-  .header {
+  .header,
+  .header-container,
+  .footer-container {
     min-height: 100vw;
-}
-
-  .header-container {
-  min-height: 100vw;
   }
 }
 
