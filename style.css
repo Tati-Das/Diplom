@@ -95,6 +95,14 @@ p {
   color: #5e42b0;
 }
 
+.download-button:hover .apple-icon {
+  fill: #5e42b0;
+}
+
+.download-button:hover .google-play-icon {
+  fill: #5e42b0;
+} 
+
 .button-insides {
   display: flex;
   justify-content: center;
@@ -159,10 +167,25 @@ p {
   background-position: left 10px top 100px;
 }
 
+.athletes-link, .players-link {
+  position: relative;
+  z-index: 10;
+  color: #e7e7e7; 
+}
+
+.athletes-link:hover {
+  color: #303b55;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.players-link:hover {
+  color: #900211;
+  text-shadow: 1px 1px 1px #000;
+}
+
 .athletes-topic-title, .players-topic-title {
   font-size: 50px;
   line-height: 54px;
-  color: #e7e7e7; 
   margin-top: 15px;
   height: 307px;
   padding-left: 6.25vw;
@@ -216,7 +239,51 @@ p {
 }
 
 .content-title {
+  color: #c1c1c1;
+  letter-spacing: 0.05em;
+  margin-left: 0.1em;
   margin-bottom: 18px;
+}
+
+.collaboration-link,
+.connection-link,
+.growth-link,
+.players-connection-link,
+.players-collaboration-link,
+.players-growth-link {
+  position: relative;
+  z-index: 10;
+  color: #c1c1c1;
+}
+
+.collaboration-link:hover {
+  color: #303b55;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.connection-link:hover {
+  color: #303b55;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.growth-link:hover {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.players-connection-link:hover {
+  color: #900211;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.players-collaboration-link:hover {
+  color: #900211;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.players-growth-link:hover {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .special-content-title {
@@ -238,7 +305,7 @@ p {
   height: 3.2px;
   background-color: #5e42b0;
   width: 15px;
-  right: -0.6px;
+  left: 2px;
   bottom: -3px;
 }
 
@@ -252,7 +319,7 @@ p {
   height: 3.2px;
   background-color: #ffffff;
   width: 15px;
-  right: -0.6px;
+  left: 2px;
   bottom: -3px;
 }
 
@@ -267,14 +334,8 @@ p {
   height: 3.2px;
   background-color: #ffffff;
   width: 15px;
-  right: -0.6px;
+  left: 2px;
   bottom: -3px;
-}
-
-.first-content-link, .first-special-content-link {
-  color: #c1c1c1;
-  letter-spacing: 0.05em;
-  margin-left: 0.1em;
 }
 
 .first-content-link:hover {
@@ -301,6 +362,24 @@ p {
   flex-direction: column;
   position: relative;
   width: 100vw;
+}
+
+.be-active-link, .find-contact-link, .work-it-link {
+  color: #e7e7e7;
+  position: relative;
+  z-index: 10;
+}
+
+.be-active-link:hover {
+  color: #5e42b0;
+}
+
+.find-contact-link:hover {
+  color: #5e42b0;
+}
+
+.work-it-link:hover {
+  color: #5e42b0;
 }
 
 .pic-container {
@@ -444,9 +523,9 @@ p {
     background-image: url("img/football_1280.jpg");
   }
 
-  .logo-link {
+  .logo-link, .logo-icon {
     width: 205px;
-    height: 56px;
+    height: 59px;
   }
 
   .main-title {
@@ -494,7 +573,7 @@ p {
     padding-left: 4.3vw;
   }
 
-  .first-content-link, .first-special-content-link {
+  .content-title {
     font-size: 32px;
   }
 
@@ -598,9 +677,9 @@ p {
     padding-right: 9.5vw;
   }
 
-  .logo-link {
+  .logo-link, .logo-icon {
     width: 191px;
-    height: 52px;
+    height: 53px;
   }
 
   .main-title {
@@ -644,6 +723,7 @@ p {
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 0;
   }
 
   .athletes-topic:after {
@@ -683,7 +763,7 @@ p {
     padding-left: 10.2%;
   }
 
-  .first-content-link, .first-special-content-link {
+  .content-title {
     font-size: 36px;
   }
 
@@ -760,20 +840,19 @@ p {
 
   .download-app-button {
   	border-radius: 30px;
-  	width: 6.9vw;
-  	height: 7.13vw;
+  	width: 130px;
+  	height: 134px;
   }
 
   .download-app-icon {
-  	width: 4.8vw;
-  	height: 4.3vw;
+  	width: 101px;
+  	height: 85px;
   }
 
   .footer-title {
   	font-size: 80px;
   	margin-left: 2vw;
   	flex-direction: column;
-  	text-align: top;
   }
 
   .footer-title-style {
@@ -855,6 +934,14 @@ p {
   .header-container,
   .footer-container {
     min-height: 100vw;
+  }
+
+  .button-and-title-container {
+  	height: 34.6vw;
+  }
+
+  .buttons-and-logo-container {
+  	height: 25vw;
   }
 }
 
