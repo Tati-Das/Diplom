@@ -293,6 +293,7 @@ p {
 .first-number, .first-special-number, .second-special-number {
   vertical-align: super;
   font-size: 14px;
+  color: #000000;
 }
 
 .first-number {
